@@ -1,0 +1,170 @@
+:root {
+  --bg: #050816;
+  --panel: #0f172a;
+  --panel-soft: #111f3d;
+  --text: #e2e8f0;
+  --muted: #93a4bf;
+  --accent: #22d3ee;
+  --accent-2: #818cf8;
+  --good: #34d399;
+  --danger: #f87171;
+  color-scheme: dark;
+  font-family: Inter, "Noto Sans JP", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 0%, #13203f, var(--bg) 60%);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  padding: clamp(1rem, 2vw, 2rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.card {
+  display: block;
+  border: 1px solid #243454;
+  background: linear-gradient(160deg, #0c152d 30%, #101f41 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgb(0 0 0 / 45%);
+}
+
+.pulse {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 140px;
+}
+
+label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+select,
+button {
+  color: var(--text);
+  background: var(--panel-soft);
+  border: 1px solid #334a72;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.92rem;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(90deg, #0e7490, #4f46e5);
+  border: none;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
+.metric {
+  background: #0a1229;
+  border: 1px solid #23395f;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.metric h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.metric p {
+  margin: 0.35rem 0 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.canvas-wrap {
+  background: #071125;
+  border: 1px solid #223559;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+canvas {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  border-bottom: 1px solid #1f3558;
+  padding: 0.5rem;
+}
+
+.table th {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
